@@ -5,6 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<title></title>
 </head>
 <style type="text/css">
@@ -26,11 +27,17 @@
 	var profile = () => {
 		window.location.href = '#profile';
 	}
+
 	var exp = () => {
 		window.location.href = '#experience';
 	}
+
 	var ach = () => {
 		window.location.href = '#achievement';
+	}
+
+	var pro = () => {
+		window.location.href = '#projects';
 	}
 
   $(document).ready(function(){
@@ -86,29 +93,29 @@
 						<p>Jl. Sumbersari III no 229 Rt.04 Rw.01</p>
 						Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur
 					</div>
-					<div style="width: 100%;height: 25%;padding: 5px;">
+					<div style="width: 100%;height: 55%;padding: 5px;">
 						<p><b>Social Media</b><p>
-						<div style="width: 100%;padding: 5px;">
-							<div style="width: 10%;height: 100%;float: left;">
-								<b>Instagram</b>	
+						<div style="width: 100%;height:15%;padding: 5px;">
+							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
+								<img src="./image/ig.png" style="max-width: 100%;max-height: 100%;">
 							</div>
-							<div style="width: 90%;height: 100%;float: left;">
-								@hilmaanadi	
+							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
+								@hilmaanadi
 							</div>
 						</div>
-						<div style="width: 100%;padding: 5px;">
-							<div style="width: 10%;height: 100%;float: left;">
-								<b>Facebook</b>	
+						<div style="width: 100%;height:15%;padding: 5px;">
+							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
+								<img src="./image/fb.png" style="max-width: 100%;max-height: 100%;">
 							</div>
-							<div style="width: 90%;height: 100%;float: left;">
+							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
 								fb.me/hilman.adi.9
 							</div>
 						</div>
-						<div style="width: 100%;padding: 5px;">
-							<div style="width: 10%;height: 100%;float: left;">
-								<b>Github</b>	
+						<div style="width: 100%;height:15%;padding: 5px;">
+							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
+								<img src="./image/github.png" style="max-width: 100%;max-height: 100%;">
 							</div>
-							<div style="width: 90%;height: 100%;float: left;">
+							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
 								github.com/hilmanadi
 							</div>
 						</div>
@@ -117,7 +124,7 @@
 			</div>
 
 			<div style="width: 100%;height: 100%;padding: 25px;" id='experience'>
-				<div style="width: 100%;height: 100%;border: solid #344767;;">
+				<div style="width: 100%;height: 100%;border: solid #344767;">
 					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:black;display: flex;align-items:  center;">
 						&#128218;EXPERIENCE
 					</div>
@@ -131,7 +138,7 @@
 					</div>
 					<div style="width: 100%;height: 20%;padding: 5px;">
 						<p>&#128188;<b>Work</b></p>
-						<p>Front End Developer on PT. Absolute Connection (2019-2020 1.5years)</p>
+						<p>Front End Developer on PT. Absolute Connection (2019-2020 1.5 years)</p>
 						<p>Developer at PG.Kebon Agung (2021 - Now)</p>
 					</div>
 				</div>
@@ -152,13 +159,43 @@
 					</div>
 				</div>
 			</div>
+
+			<div style="width: 100%;height: 100%;padding: 25px;background: white;" id='projects'>
+				<div style="width: 100%;height: 100%;border:solid #344767;">
+					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:white;display: flex;align-items:  center;color:black;">
+						&#128297; PROJECTS
+					</div>
+					<div style="width: 100%;height: 10%;padding: 5px;">
+						<p>1. <b>Ketering</b></p>
+						<p>Web Application for order and buy product of a catering, builded using laravel </p>
+					</div>
+					<div style="width: 100%;height: 10%;padding: 5px;">
+						<p>2. <b>Toko Kartika</b></p>
+						<p>Web Application for take a look of items in the shop (CRUD) + Voice command, using html,javascript,and node js</p>
+					</div>
+					<div style="width: 100%;height: 10%;padding: 5px;">
+						<p>3. <b>SPT</b></p>
+						<p>Desktop Application for buying and paying sugarcane based on the delivery and the quality of the sugarcane itself, builded using python tkinter</p>
+					</div>
+					<div style="width: 100%;height: 10%;padding: 5px;">
+						<p>4. <b>Surat Jalan KBA</b></p>
+						<p>Web Application for getting out goods from the warehouse , builded using html,javascript,and php</p>
+					</div>
+					<div style="width: 100%;height: 10%;padding: 5px;">
+						<p>5. <b>LAF</b></p>
+						<p>Mobile Application for afiation, builded using html,javascript and convert to mobile app using apache cordova</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
   <ul id="slide-out" class="sidenav" style="background: #344767;;">
-    <li><a onclick="back()" style="color: white;">Back</a></li>
-    <li><a onclick="profile()" style="color: white;">Profile</a></li>
-    <li><a onclick="exp()" style="color: white;">Experience</a></li>
-    <li><a onclick="ach()" style="color: white;">Achievement</a></li>
+    <li><a onclick="back()" style="color: white;bottom: 0;">Back</a></li>
+    <li><a onclick="profile()" style="color: white;">&#128100; Profile</a></li>
+    <li><a onclick="exp()" style="color: white;">&#128218; Experience</a></li>
+    <li><a onclick="ach()" style="color: white;">&#127894; Achievement</a></li>
+    <li><a onclick="ach()" style="color: white;">&#128297; Projects</a></li>
   </ul>
 		
 	</div>
