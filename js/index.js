@@ -6,7 +6,7 @@ var back = () =>{
 	$('.sidenav').sidenav('close');
 }
 
-var profile = () => {
+var prof = () => {
 	window.location.href = '#profile';
 }
 
@@ -20,6 +20,10 @@ var ach = () => {
 
 var pro = () => {
 	window.location.href = '#projects';
+}
+
+var intro = () => {
+	window.location.href = '#welcome';
 }
 
 $(document).ready(function(){
@@ -51,5 +55,9 @@ $('#so-pro').click(function(){
 	pro();
 });
 
-window.location.href('#welcome');
+$('#so-intro').click(function(){
+	intro();
+});
+
+
 });
