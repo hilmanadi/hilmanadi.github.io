@@ -6,133 +6,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script type="text/javascript" src="./js/index.js"></script>
 	<title>LANDING PAGE</title>
 </head>
-<style type="text/css">
-	
-</style>
-<script type="text/javascript">
-	var check = () =>{
-	  $('.sidenav').sidenav('open');
-	}
-
-	var back = () =>{
-		$('.sidenav').sidenav('close');
-	}
-
-	var profile = () => {
-		window.location.href = '#profile';
-	}
-
-	var exp = () => {
-		window.location.href = '#experience';
-	}
-
-	var ach = () => {
-		window.location.href = '#achievement';
-	}
-
-	var pro = () => {
-		window.location.href = '#projects';
-	}
-
-  $(document).ready(function(){
-	$('.sidenav').sidenav({
-		draggable:true
-	});
-
-	$('#burgerbutton').click(function(){
-		check();
-	});
-
-	$('#so-back').click(function(){
-		back();
-	});
-
-	$('#so-prof').click(function(){
-		prof();
-	});
-
-	$('#so-exp').click(function(){
-		exp();
-	});
-
-	$('#so-ach').click(function(){
-		ach();
-	});
-
-	$('#so-pro').click(function(){
-		pro();
-	});
-	window.location.href('#welcome');
-  });
-</script>
 <body>
 	<div  id="wb">
 		<div id="burgerbutton">
 			&equiv;
 		</div>
-		<div style="" id="baratas">
-			
+		<div id="baratas">
+
 		</div>
 
 		<div id='content'>
 			<div id='welcome'>
-				<div style="" id="kiri">
-					<div style="width: 75%;">
-						<b style="font-size: 200%">Hello, Welcome to My Landing Page :)</b>
-						<p><b style="font-size: 125%;">Website and Desktop App Developers (Javascript, PHP, Python)</b></p>
+				<div id="kiri">
+					<div id="cnt">
+						<b id="cnt200">Hello, Welcome to My Landing Page :)</b>
+						<p><b id="cnt125">Website and Desktop App Developers (Javascript, PHP, Python)</b></p>
 						<p>Let me introduce myself, My name Hilman Adi Kartika, im 26 yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.</p>	
 					</div>
 				</div>
 				<div id="kanan">
 					<div id="circle">
-								<img src="./image/p1.jpg" style="" id="imgc">
+								<img src="./image/p1.jpg" id="imgc">
 						</div>
 				</div>
 			</div>
 
-			<div style="width: 100%;height: 100%;background:#242d36;color:white;padding: 25px;" id='profile'>
-				<div style="width: 100%;height: 100%;border: solid;border-radius: 15px;">
-					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:white;display: flex;align-items:  center;">
+			<div id='profile'>
+				<div id="w-profile">
+					<div id="header-ap">
 						&#128100;PROFILE
 					</div>
-					<div style="width: 100%;height: 10%;padding: 5px;">
+					<div id="p-ds">
 						<p>&#9743; <b>Phone</b></p>
 						0812-5911-2400
 					</div>
-					<div style="width: 100%;height: 10%;padding: 5px;">
+					<div id="p-ds">
 						<p>&#9993;<b>Email</b><p>
 						hilmanadi1995@gmail.com
 					</div>
-					<div style="width: 100%;height: 20%;padding: 5px;">
+					<div id="p-dl">
 						<p>&#127968;<b>Address</b><p>
 						<p>Jl. Sumbersari III no 229 Rt.04 Rw.01</p>
 						Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur
 					</div>
-					<div style="width: 100%;height: 50%;padding: 5px;">
+					<div id="p-sm">
 						<p><b>Social Media</b><p>
-						<div style="width: 100%;height:15%;padding: 5px;">
-							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
-								<img src="./image/ig.png" style="max-width: 100%;max-height: 100%;">
+						<div id="p-sm-c">
+							<div id="p-sm-c-s">
+								<img src="./image/ig.png" style="">
 							</div>
-							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
+							<div id="p-sm-c-d">
 								&nbsp;@hilmaanadi
 							</div>
 						</div>
-						<div style="width: 100%;height:15%;padding: 5px;">
-							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
-								<img src="./image/fb.png" style="max-width: 100%;max-height: 100%;">
+						<div id="p-sm-c">
+							<div id="p-sm-c-s">
+								<img src="./image/fb.png" style="">
 							</div>
-							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
+							<div id="p-sm-c-d">
 								&nbsp;fb.me/hilman.adi.9
 							</div>
 						</div>
-						<div style="width: 100%;height:15%;padding: 5px;">
-							<div style="width: 5%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;">
-								<img src="./image/github.png" style="max-width: 100%;max-height: 100%;">
+						<div id="p-sm-c">
+							<div id="p-sm-c-s">
+								<img src="./image/github.png" style="">
 							</div>
-							<div style="width: 10%;height: 100%;float: left;display: flex;align-items: center;">
+							<div id="p-sm-c-d">
 								&nbsp;github.com/hilmanadi
 							</div>
 						</div>
@@ -140,20 +82,20 @@
 				</div>
 			</div>
 
-			<div style="width: 100%;height: 100%;padding: 25px;" id='experience'>
-				<div style="width: 100%;height: 100%;border: solid #242d36;border-radius: 15px;">
-					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:black;display: flex;align-items:  center;">
+			<div id='experience'>
+				<div id="w-experience">
+					<div id="header-ep">
 						&#128218;EXPERIENCE
 					</div>
-					<div style="width: 100%;height: 15;padding:5px;">
+					<div id="h-ep-s">
 						<p>&#9000;<b>Internship</b></p>
 						<p>Economics and Business Faculty, Brawijaya University as Network Engineer</p>
 					</div>
-					<div style="width: 100%;height: 15;padding: 5px;">
+					<div id="h-ep-s">
 						<p>&#128101;<b>Participants</b><p>
 						<p>Code And Algorithm Competition at Informatic Engineers Faculty, Brawijaya University</p>
 					</div>
-					<div style="width: 100%;height: 25%;padding: 5px;">
+					<div id="h-ep-l">
 						<p>&#128188;<b>Work</b></p>
 						<p>1. Front End Developer at PT. Absolute Connection (2019-2020 1.5 years)</p>
 						<p>2. Developer at PG.Kebon Agung (2021 - Now)</p>
@@ -161,45 +103,45 @@
 				</div>
 			</div>
 
-			<div style="width: 100%;height: 100%;padding: 25px;background: #242d36;color: white;" id='achievement'>
-				<div style="width: 100%;height: 100%;border: solid;border-radius: 15px;">
-					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:white;display: flex;align-items:  center;">
+			<div id='achievement'>
+				<div id="w-achievement">
+					<div id="header-ap">
 						&#127894;ACHIEVEMENT
 					</div>
-					<div style="width: 100%;height: 15%;padding: 5px;">
+					<div id="h-ap-s">
 						<p>&#127941;<b>Office</b></p>
 						<p>Gold achievment on Microsoft Office Desktop Application</p>
 					</div>
-					<div style="width: 100%;height: 15%;padding: 5px;">
+					<div id="h-ap-s">
 						<p>&#129352;<b>PES</b></p>
 						<p>Second Place Pro Evolution Soccer 2018 on Computer Science Faculty Competition</p>
 					</div>
 				</div>
 			</div>
 
-			<div style="width: 100%;height: 100%;padding: 25px;background: white;" id='projects'>
-				<div style="width: 100%;height: 100%;border:solid #242d36;border-radius: 15px;">
-					<div style="width: 100%;height: 10%;padding:0px 0px 0px 5px;font-weight: bold;color:white;display: flex;align-items:  center;color:black;">
+			<div id='projects'>
+				<div id="w-projects">
+					<div id="header-ep">
 						&#128297; PROJECTS
 					</div>
-					<div style="width: 100%;height: 90%;padding: 5px;overflow-y: auto;">
-						<div style="width: 100%;height: 25%;padding: 5px;">
+					<div id="b-ep">
+						<div id="b-ep-s">
 							<p>1. <b>Ketering</b></p>
 							<p>Web Application for order and buy product of a catering, builded using Laravel </p>
 						</div>
-						<div style="width: 100%;height: 25%;padding: 5px;">
+						<div id="b-ep-s">
 							<p>2. <b>Toko Kartika</b></p>
 							<p>Web Application for take a look of items in the shop (CRUD) + Voice command, using HTML, Javascript,and Node JS</p>
 						</div>
-						<div style="width: 100%;height: 25%;padding: 5px;">
+						<div id="b-ep-s">
 							<p>3. <b>SPT KBA</b></p>
 							<p>Desktop Application for buying and paying sugarcane from farmers, builded using Python TKinter</p>
 						</div>
-						<div style="width: 100%;height: 25%;padding: 5px;">
+						<div id="b-ep-s">
 							<p>4. <b>Surat Jalan KBA</b></p>
 							<p>Web Application for getting out goods from the warehouse , builded using HTML, Javascript, and PHP</p>
 						</div>
-						<div style="width: 100%;height: 25%;padding: 5px;">
+						<div id="b-ep-s">
 							<p>5. <b>LAF</b></p>
 							<p>Mobile Application for afiliation, builded using HTML,  Javascript and convert to mobile app using Apache Cordova</p>
 						</div>
@@ -208,17 +150,13 @@
 			</div>
 		</div>
 
-		<ul id="slide-out" class="sidenav" style="background: #242d36;;">
+		<ul id="slide-out" class="sidenav" style="">
 	    	<li><a id="so-back">Back</a></li>
 		    <li><a id="so-prof">&#128100; Profile</a></li>
 		    <li><a id="so-exp" >&#128218; Experience</a></li>
 		    <li><a id="so-ach" >&#127894; Achievement</a></li>
 		    <li><a id="so-pro" >&#128297; Projects</a></li>
 		</ul>
-		
-
-
-
 	</div>
 </body>
 </html>
