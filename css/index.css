@@ -1,0 +1,36 @@
+*{
+	margin: 0;padding: 0;box-sizing: border-box;
+}
+#wb{
+	width: 100%;height: 100%;position: absolute;
+}
+#burgerbutton {
+	width: 10%;height: 10%;position: absolute;color: white;display: flex;align-items: center;justify-content: center;font-size: 200%;
+}
+#baratas{
+	width: 100%;height: 10%;border-bottom:solid white;color: #c3073f;display: flex;align-items: center;justify-content: center;font-size: 200%;color: white;background: #242d36;
+}
+#content{
+	width: 100%;height: 90%;
+}
+#welcome{
+	width: 100%;height: 100%;
+}
+#welcome #kiri{
+	width: 60%;height: 100%;float: left;display: grid;place-items:center;color:#242d36;
+}
+#welcome #kanan{
+	width: 40%;height: 100%;float: left;display: flex;align-items: center;justify-content: center;padding:5px 5px;
+}
+#welcome #kanan #circle{
+	height: 20rem;width: 20rem;display: flex;align-items: center;justify-content: center;
+}
+#welcome #kanan #circle #imgc{
+	max-height:100%;width:100%;border-radius: 50%;border: solid #242d36;
+}
+#so-back{
+	color: white;bottom: 0;
+}
+#so-prof,#so-exp,#so-ach,#so-pro{
+	color: white;
+}
