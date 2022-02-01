@@ -1,164 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./image/hak.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <script type="text/javascript" src="./js/index.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="./image/hak.ico">
+	<link rel="stylesheet" href="./css/bulma.min.css">
+	<script src="./js/alpine.min.js" defer></script>
+	<script src="./js/index.js"></script>
 	<title>PROFILE HILMAN ADI KARTIKA</title>
 </head>
 <body>
-	<div id="wb">
-		<div id="burgerbutton">
-			&equiv;
-		</div>
-		<div id="baratas">
+	<div class="content">
+		<nav class="navbar is-dark" role="navigation" x-data="{isOpen:false,heading:'HILMAN ADI KARTIKA',menu:{i:'Introduction',p:'Profile',e:'Experience',a:'Achievement',pr:'Projects',h:'Hobbies'}}">
+			<div class="navbar-brand">
+			  <a class="navbar-item" @click='window.location.href="./index.html"' style="font-weight: bold;">
+				<img src='./image/hak.ico'> <span x-text='heading'></span>
+			  </a>
+		  
+			  <a role="button" class="navbar-burger" @click="isOpen = !isOpen">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			  </a>
+			</div>
+		  
+			<div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isOpen }" @click.away="isOpen = true">
+			  <div class="navbar-start">
+				<a class="navbar-item" @click='getmenu(menu.i)'>
+				  &#127914; <span x-text='menu.i'></span>
+				</a>
+				<a class="navbar-item" @click='getmenu(menu.p)'>
+					&#128100; <span x-text='menu.p'></span>
+				</a>
+				<a class="navbar-item" @click='getmenu(menu.e)'>
+					&#128218; <span x-text='menu.e'></span>
+				</a>
+				<a class="navbar-item" @click='getmenu(menu.a)'>
+					&#127894; <span x-text='menu.a'></span>
+				</a>
+				<a class="navbar-item" @click='getmenu(menu.pr)'>
+					&#128297; <span x-text='menu.pr'></span>
+				</a>
+			  </div>
+			</div>
+		</nav>
 
-		</div>
-
-		<div id='content'>
-			<div id='welcome'>
-				<div id="kiri">
-					<div id="cnt">
-						<b id="cnt200">Hello, Welcome to My Landing Page :)</b>
-						<p><b id="cnt125">Website and Desktop App Developers (Javascript, PHP, Python)</b></p>
-						<p>Let me introduce myself, My name Hilman Adi Kartika, im 26 yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.</p>	
+		<section class="hero">
+			<div class="hero-body has-text-centered" id="introduction" x-data="{head:'Introduction',heading:'Hello, Welcome to My Landing Page :)',subheading:'Website and Desktop App Developers (Javascript, PHP, Python)',description:'Let me introduce myself, My name Hilman Adi Kartika, im 26 yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.'}">
+				<div class="columns">
+					<div class="column">
+						&#127914; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
-				</div>
-				<div id="kanan">
-					<div id="circle">
-								<img src="./image/p1.jpg" id="imgc">
-						</div>
-				</div>
+			  	</div>
+				<div class="columns">
+					<div class="column" style="text-align: left;">
+						<h3 x-text="heading"></h3>
+						<h4 x-text="subheading">Z</h4>
+						<span x-text="description"></span>
+					</div>
+					<div class="column is-one-third">
+							<img class="is-rounded" src="./image/p1.jpg">
+					</div>
+			  	</div>
 			</div>
 
-			<div id='profile'>
-				<div id="w-profile">
-					<div id="header-ap">
-						&#128100;PROFILE
+			<div class="hero-body has-text-centered has-background-grey has-text-light" id="profile" x-data="{head:'Profile',content:{p:{h:'Phone',b:'0812-4911-2400'},e:{h:'Email',b:'hilmanadi1992@gmail.com'},a:{h:'Address',b:'Jl. Sumbersari 3 no 229 Rt.04 Rw.01 Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur'},ig:{h:'',b:'@hilmaanadi'},fb:{h:'',b:'fb.me/hilman.adi.9'},gh:{h:'',b:'github.com/hilmanadi'}}}">				
+				<div class="columns">
+					<div class="column">
+						&#128100; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
-					<div id="p-ds">
-						<p>&#9743; <b>Phone</b></p>
-						0812-5911-2400
-					</div>
-					<div id="p-ds">
-						<p>&#9993;<b>Email</b><p>
-						hilmanadi1995@gmail.com
-					</div>
-					<div id="p-dl">
-						<p>&#127968;<b>Address</b><p>
-						<p>Jl. Sumbersari III no 229 Rt.04 Rw.01</p>
-						Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur
-					</div>
-					<div id="p-sm">
-						<p><b>Social Media</b><p>
-						<div id="p-sm-c">
-							<div id="p-sm-c-s">
-								<img src="./image/ig.png">
+			  	</div>
+				<div class="columns">
+					<div class="column is-half">
+						<div class="columns">
+							<div class="column is-half">
+								<span x-text='content.p.h'></span>
 							</div>
-							<div id="p-sm-c-d">
-								&nbsp;@hilmaanadi
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.p.b'></span>
 							</div>
 						</div>
-						<div id="p-sm-c">
-							<div id="p-sm-c-s">
-								<img src="./image/fb.png">
+						<div class="columns">
+							<div class="column is-half">
+								<span x-text='content.e.h'></span>
 							</div>
-							<div id="p-sm-c-d">
-								&nbsp;fb.me/hilman.adi.9
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.e.b'></span>
 							</div>
 						</div>
-						<div id="p-sm-c">
-							<div id="p-sm-c-s">
-								<img src="./image/github.png">
+						<div class="columns">
+							<div class="column is-half">
+								<span x-text='content.a.h'></span>
 							</div>
-							<div id="p-sm-c-d">
-								&nbsp;github.com/hilmanadi
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.a.b'></span>
 							</div>
 						</div>
 					</div>
-				</div>
+
+					<div class="column is-half">
+						<div class="columns">
+							<div class="column is-half">
+									<img src="./image/ig.png" alt="" style="width: 32px;height: 32px;">
+							</div>
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.ig.b'></span>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column is-half">
+								<img src="./image/fb.png" alt="" style="width: 32px;height: 32px;">
+							</div>
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.fb.b'></span>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column is-half">
+								<img src="./image/github.png" alt="" style="width: 32px;height: 32px;">
+							</div>
+							<div class="column is-half"  style="text-align: left;">
+								<span x-text='content.gh.b'></span>
+							</div>
+						</div>
+					</div>
+			  	</div>
 			</div>
 
-			<div id='experience'>
-				<div id="w-experience">
-					<div id="header-ep">
-						&#128218;EXPERIENCE
+			<div class="hero-body has-text-centered" id="experience" x-data="{head:'Experience',content:{i:{h:'Internship',b:'Economics and Business Faculty, Brawijaya University as Network Engineer'},w:{h:'Works',b1:' Front End Developer at PT. Absolute Connection (2019-2020 1.5 years)',b2:'Developer at PG.Kebon Agung (2021 - Now)'},p:{h:'Participants',b:'Code And Algorithm Competition at Informatic Engineers Faculty, Brawijaya University'}}}">
+				<div class="columns">
+					<div class="column">
+						&#128218; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
-					<div id="h-ep-s">
-						<p>&#9000;<b>Internship</b></p>
-						<p>Economics and Business Faculty, Brawijaya University as Network Engineer</p>
+			  	</div>
+				<div class="columns">
+					<div class="column is-half">
+						<span x-text="content.i.h"></span>
 					</div>
-					<div id="h-ep-s">
-						<p>&#128101;<b>Participants</b><p>
-						<p>Code And Algorithm Competition at Informatic Engineers Faculty, Brawijaya University</p>
+					<div class="column is-half"  style="text-align: left;">
+						<span x-text="content.i.b"></span>
 					</div>
-					<div id="h-ep-l">
-						<p>&#128188;<b>Work</b></p>
-						<p>1. Front End Developer at PT. Absolute Connection (2019-2020 1.5 years)</p>
-						<p>2. Developer at PG.Kebon Agung (2021 - Now)</p>
+			  	</div>
+				  <div class="columns">
+					<div class="column is-half">
+						<span x-text="content.p.h"></span>
 					</div>
-				</div>
+					<div class="column is-half"  style="text-align: left;">
+						<span x-text="content.p.b"></span>
+					</div>
+			  	</div>
+				  <div class="columns">
+					<div class="column is-half">
+						<span x-text="content.w.h"></span>
+					</div>
+					<div class="column is-half" style="text-align: left;">
+						<p>1. <span x-text="content.w.b1"></span></p>
+						<p>2.<span x-text="content.w.b2"></span></p>
+					</div>
+			  	</div>
 			</div>
 
-			<div id='achievement'>
-				<div id="w-achievement">
-					<div id="header-ap">
-						&#127894;ACHIEVEMENT
+			<div class="hero-body has-text-centered has-background-grey has-text-light" id="achievement" x-data="{head:'Achievement',content:{mo:{h:'Microsoft Office',b:'Gold achievment on Microsoft Office Desktop Application'},pes:{h:'PES (Pro Evolution Soccer)',b:'Second Place Pro Evolution Soccer 2018 on Computer Science Faculty Competition'}}}">
+				<div class="columns">
+					<div class="column">
+						&#127894; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
-					<div id="h-ap-s">
-						<p>&#127941;<b>Office</b></p>
-						<p>Gold achievment on Microsoft Office Desktop Application</p>
+			  	</div>
+				<div class="columns">
+					<div class="column is-half" >
+						<span x-text='content.mo.h'></span>
 					</div>
-					<div id="h-ap-s">
-						<p>&#129352;<b>PES</b></p>
-						<p>Second Place Pro Evolution Soccer 2018 on Computer Science Faculty Competition</p>
+					<div class="column is-half"  style="text-align: left;">
+						<span x-text='content.mo.b'></span>
 					</div>
-				</div>
+			  	</div>
+				  <div class="columns">
+					<div class="column is-half">
+						<span x-text='content.pes.h'></span>
+					</div>
+					<div class="column is-half"  style="text-align: left;">
+						<span x-text='content.pes.b'></span>
+					</div>
+			  	</div>
 			</div>
 
-			<div id='projects'>
-				<div id="w-projects">
-					<div id="header-ep">
-						&#128297; PROJECTS
+			<div class="hero-body" id="projects" x-data="{head:'Projects',dt:[{no:'1',pn:'Ketering',dp:'Php, and Laravel'},{no:'2',pn:'Toko Kartika',dp:'HTML/CSS, JS, and Node JS'},{no:'3',pn:'SPT KBA',dp:'Python Tkinter'},{no:'4',pn:'Surat Jalan KBA',dp:'HTML/CSS, JS, and PHP'},{no:'5',pn:'LAF',dp:'HTML/CSS, JS and Apache Cordova(Mobile Apps)'},{no:'6',pn:'Toko Kartika V2',dp:'HTML, Bulma CSS, Node JS, and Alpine JS'}]}">
+				<div class="columns">
+					<div class="column">
+						&#128297; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
-					<div id="b-ep">
-						<div id="b-ep-s">
-							<p>1. <b>Ketering</b></p>
-							<p>Web Application for order and buy product of a catering, builded using Laravel </p>
-						</div>
-						<div id="b-ep-s">
-							<p>2. <b>Toko Kartika</b></p>
-							<p>Web Application for take a look of items in the shop (CRUD) + Voice command, using HTML, Javascript,and Node JS</p>
-						</div>
-						<div id="b-ep-s">
-							<p>3. <b>SPT KBA</b></p>
-							<p>Desktop Application for buying and paying sugarcane from farmers, builded using Python TKinter</p>
-						</div>
-						<div id="b-ep-s">
-							<p>4. <b>Surat Jalan KBA</b></p>
-							<p>Web Application for getting out goods from the warehouse , builded using HTML, Javascript, and PHP</p>
-						</div>
-						<div id="b-ep-s">
-							<p>5. <b>LAF</b></p>
-							<p>Mobile Application for afiliation, builded using HTML,  Javascript and convert to mobile app using Apache Cordova</p>
-						</div>
+			  	</div>
+				<div class="columns">
+					<div class="column is-full">
+						<table class="table">
+							<thead>
+								<tr>
+									<th><abbr title="No. ">No. </abbr></th>									
+									<th><abbr title="Project Name">Project Name</abbr></th>
+									<th><abbr title="Project Tech">Project Tech</abbr></th>
+								</tr>
+							</thead>
+							<tbody>
+								<template x-for='x in dt' :key='x.no'>
+									<tr>
+										<th data-label="No. " x-text="x.no">
+										</th>
+										<td  data-label="Project Name" x-text="x.pn">
+										</td>
+										<td  data-label="Project Tech" x-text="x.dp">
+										</td>
+									</tr>
+								</template>
+							</tbody>
+						</table>
 					</div>
-				</div>
+			  	</div>
 			</div>
-		</div>
+		</section>
 
-		<ul id="slide-out" class="sidenav">
-		    <li><a id="so-back">&#128281; Back</a></li>
-		    <li><a id="so-intro">&#127914; Introduction</a></li>
-		    <li><a id="so-prof">&#128100; Profile</a></li>
-		    <li><a id="so-exp" >&#128218; Experience</a></li>
-		    <li><a id="so-ach" >&#127894; Achievement</a></li>
-		    <li><a id="so-pro" >&#128297; Projects</a></li>
-		</ul>
-	</div>
+		<footer class="footer has-background-dark has-text-white">
+			<div class="content has-text-centered">
+				<p>
+					This website fully builded using <a href='https://bulma.io/'>Bulma CSS</a>, and Javascript using <a href='https://alpinejs.dev/'>Alpine JS</a>
+				</p>
+			</div>
+		</footer>
 </body>
 </html>
