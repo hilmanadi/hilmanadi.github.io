@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bulma.min.css">
+    <script src="./assets/js/alpine.min.js" defer></script>
+    <title>Gudang KBA</title>
+    <script>
+        var dtl = '';
+        var alldt = async () => {
+                let y = "";
+                let jn = { "tag": "alldt", "srch": "" };
+                const xx = await fetch('./models/doquery1.php',{
+                    method:'POST',
+                    body:JSON.stringify(jn)
+                })
+
+                const xxx = await xx.json();
+                // console.log(xxx.response);
+                return xxx;
+        }
+
+        var detail  = async (x) => {
+            let jn = { "tag": "detail", "id": x };
+            const xx = await fetch('./models/doquerydetail.php', {
+                method: 'POST',
+                body: JSON.stringify(jn)
+            })
+            const xxx = await xx.json();
+            // return xxx;/\
+            // console.log(xxx);
+            dtl = xxx;
+            window.location.href='#detail';
+
+            
+            // return xxx;
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar has-background-warning" role="navigation" x-data="{isOpen:false}">
+            <div class="navbar-brand">
+                <a class="navbar-item" @click='location.reload()' style="font-weight: bold;">
+                    <img src='./assets/images/logoka.png'>GUDANG PG. KBA
+                </a>
+        
+                <a role="button" class="navbar-burger" @click="isOpen = !isOpen">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isOpen }" @click.away="isOpen = true">
+                <div class="navbar-start">
+                    <a class="navbar-item" href='#search'>
+                        &#128269; Search
+                    </a>
+        
+                    <a class="navbar-item" href="#input">
+                        &#128221; Input
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="hero is-fullheight-with-navbar">
+            <div class="hero-body px-3 has-background-info-light">
+                <div class="container px-5 py-5"
+                    style="height: 70vh;border: solid 5px #ffe08a ;overflow-y: auto;overflow-x: hidden;border-radius: 7.5px;"
+                    id="fc">
+                    <div x-data="{page: location.hash}" @hashchange.window="page = location.hash">
+                        <span x-show="page === '#search'">
+                            <div x-data="{dt:[]}" x-init="dt = await alldt()">
+                                <template x-for="a in dt">
+                                <div class="tile is-ancestor mt-2 mb-2" style="border: solid;border-radius: 5px;" @click="detail(a.id)">
+                                    <div class="tile is-vertical is-4 is-parent is-flex is-align-items-center is is-justify-content-center">
+                                        <img src="./models/tempimg/{{a.foto}}" alt="" style="height: 35vh;width: 30vw;">
+                                    </div>
+                                    <div class="tile is-parent is-vertical has-text-dark">
+                                        <div class="tile is-child columns">
+                                            <div class="column is-two-fifths is-flex is-align-items-center is-justify-content-center">
+                                                Kode Barang
+                                            </div>
+                                            <div class="column is-one-fifth is-flex is-align-items-center is-justify-content-center">
+                                                :
+                                            </div>
+                                            <div class="column is-flex-mobile is-justify-content-center is-align-items-center" x-text="a.kdbr">
+                                            </div>
+                                        </div>
+                                        <div class="tile is-child columns">
+                                            <div class="column is-two-fifths is-flex is-align-items-center is-justify-content-center">
+                                                Nama Barang
+                                            </div>
+                                            <div class="column is-one-fifth is-flex is-align-items-center is-justify-content-center">
+                                                :
+                                            </div>
+                                            <div class="column is-flex-mobile is-justify-content-center is-align-items-center" x-text="a.nabr">
+                                       
+                                            </div>
+                                        </div>
+                                        <div class="tile is-child columns">
+                                            <div class="column is-two-fifths is-flex is-align-items-center is-justify-content-center">
+                                                Spesifikasi Barang
+                                            </div>
+                                            <div class="column is-one-fifth is-flex is-align-items-center is-justify-content-center">
+                                                :
+                                            </div>
+                                            <div class="column is-flex-mobile is-justify-content-center is-align-items-center" x-text="a.spes">
+                                            </div>
+                                        </div>
+                                        <div class="tile is-child columns">
+                                            <div class="column is-two-fifths is-flex is-align-items-center is-justify-content-center">
+                                                Lokasi Barang
+                                            </div>
+                                            <div class="column is-one-fifth is-flex is-align-items-center is-justify-content-center">
+                                                :
+                                            </div>
+                                            <div class="column is-flex-mobile is-justify-content-center is-align-items-center" x-text="a.loka">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                </div>
+                                
+                            </div>
+
+                        </span>
+                        <span x-show="page === '#input'">
+
+                        </span>
+
+                        <span x-show="page === '#detail'">
+                            <div>
+                                <button @click="console.log(dtl)">
+                                    uhuy
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="hero-footer has-background-warning has-text-dark is-flex is-justify-content-center is-align-items-center py-3 has-text-weight-bold">
+                GUDANG PERLENGKAPAN PG. KEBON AGUNG &copy; 2022, Copyright by HAK Team <img class="image is-24x24"
+                    src="./assets/images/hak.ico" alt="">, All Right Reserved
+            </div>
+        </section>
+</body>
+</html>
