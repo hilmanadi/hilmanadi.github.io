@@ -1,5 +1,4 @@
 var getmenu = (x) => {
-	console.log(x);
 	if(x=="Introduction"){
 		window.location.href='#introduction';
 	}else if(x=='Profile'){

@@ -8,14 +8,15 @@
 	<link rel="stylesheet" href="./css/bulma.min.css">
 	<script src="./js/alpine.min.js" defer></script>
 	<script src="./js/index.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
 	<title>PROFILE HILMAN ADI KARTIKA</title>
 </head>
 <body>
 	<div class="content">
-		<nav class="navbar is-dark" role="navigation" x-data="{isOpen:false,heading:'HILMAN ADI KARTIKA',menu:{i:'Introduction',p:'Profile',e:'Experience',a:'Achievement',pr:'Projects',h:'Hobbies'}}">
+		<nav id="nbr" class="navbar is-dark" role="navigation" x-data="{isOpen:false,heading:'HILMAN ADI KARTIKA',menu:{i:'Introduction',p:'Profile',e:'Experience',a:'Achievement',pr:'Projects',h:'Hobbies'}}">
 			<div class="navbar-brand">
 			  <a class="navbar-item" @click='window.location.href="./index.html"' style="font-weight: bold;">
-				<img src='./image/hak.ico'> <span x-text='heading'></span>
+				<img src='./image/hak.ico' > <span x-text='heading' ></span>
 			  </a>
 		  
 			  <a role="button" class="navbar-burger" @click="isOpen = !isOpen">
@@ -47,25 +48,26 @@
 		</nav>
 
 		<section class="hero">
-			<div class="hero-body has-text-centered" id="introduction" x-data="{head:'Introduction',heading:'Hello, Welcome to My Landing Page :)',subheading:'Website and Desktop App Developers (Javascript, PHP, Python)',description:'Let me introduce myself, My name Hilman Adi Kartika, im 26 yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.'}">
+			<div class="hero-body has-text-centered" id="introduction" x-data="{head:'Introduction',heading:'Hello, Welcome to My Landing Page :)',subheading:'Website and Desktop App Developers (Javascript, PHP, Python)',description:'Let me introduce myself, My name Hilman Adi Kartika, im 26 yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.'}" x-transition:enter="transition ease-out duration-100">
 				<div class="columns">
 					<div class="column">
 						&#127914; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
 					</div>
 			  	</div>
 				<div class="columns">
-					<div class="column" style="text-align: left;">
+					<div class="column" style="text-align: left;" >
 						<h3 x-text="heading"></h3>
 						<h4 x-text="subheading">Z</h4>
 						<span x-text="description"></span>
 					</div>
-					<div class="column is-one-third">
-							<img style="border-radius: 50%;width: 32px;width: 128px;"  src="./image/p1.jpg">
+					<div class="column is-two-fifths">
+						<img id="i1" style="border-radius: 50%;width: 12.5em;height: 12.5em;border:solid #7a7a7a;"  src="./image/p1.jpg">
 					</div>
-			  	</div>
+			  	</div>			
 			</div>
 
 			<div class="hero-body has-text-centered has-background-grey has-text-light" id="profile" x-data="{head:'Profile',content:{p:{h:'Phone',b:'0812-4911-2400'},e:{h:'Email',b:'hilmanadi1992@gmail.com'},a:{h:'Address',b:'Jl. Sumbersari 3 no 229 Rt.04 Rw.01 Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur'},ig:{h:'',b:'@hilmaanadi'},fb:{h:'',b:'fb.me/hilman.adi.9'},gh:{h:'',b:'github.com/hilmanadi'}}}">				
+				
 				<div class="columns">
 					<div class="column">
 						&#128100; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
@@ -185,7 +187,7 @@
 			  	</div>
 			</div>
 
-			<div class="hero-body" id="projects" x-data="{head:'Projects',dt:[{no:'1',pn:'Ketering',dp:'PhP, and Laravel'},{no:'2',pn:'Toko Kartika',dp:'HTML/CSS, JS, and Node JS'},{no:'3',pn:'SPT KBA',dp:'Python Tkinter'},{no:'4',pn:'Surat Jalan KBA',dp:'HTML/CSS, JS, and PHP'},{no:'5',pn:'LAF',dp:'HTML/CSS, JS and Apache Cordova(Mobile Apps)'},{no:'6',pn:'Toko Kartika V2',dp:'HTML, Bulma CSS, Node JS, and Alpine JS'}]}">
+			<div class="hero-body" id="projects" x-data="{head:'Projects',dt:[{no:'1',pn:'Ketering',dp:'PhP, and Laravel'},{no:'2',pn:'Toko Kartika',dp:'HTML/CSS, JS, and Node JS'},{no:'3',pn:'SPT KBA',dp:'Python Tkinter'},{no:'4',pn:'Surat Jalan KBA',dp:'HTML/CSS, JS, and PHP'},{no:'5',pn:'LAF',dp:'HTML/CSS, JS and Apache Cordova(Mobile Apps)'},{no:'6',pn:'Toko Kartika V2',dp:'HTML, Bulma CSS, Node JS, and Alpine JS'},{no:'7',pn:'Gudang Perlengkapan PG. KBA',dp:'HTML, Bulma CSS, and Alpine JS'}]}">
 				<div class="columns">
 					<div class="column">
 						&#128297; <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
@@ -219,7 +221,7 @@
 			</div>
 		</section>
 
-		<footer class="footer has-background-dark has-text-white">
+		<footer class="footer has-background-dark has-text-white" id="ftr">
 			<div class="content has-text-centered">
 				<p>
 					This website fully builded using <a href='https://bulma.io/'>Bulma CSS</a>, and Javascript using <a href='https://alpinejs.dev/'>Alpine JS</a>, <img src="image/hak.ico" style="width: 30px;height: 30px;"> By Hilman Adi Kartika 
