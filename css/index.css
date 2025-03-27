@@ -19,7 +19,8 @@
 }
 
 #achievement,
-#profile {
+#profile,
+#skills {
   -webkit-animation: faderight 2s ease;
   -moz-animation: faderight 2s ease;
   animation: faderight ease 2s;
