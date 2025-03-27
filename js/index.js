@@ -3,7 +3,7 @@ var getYear = () =>{
 	const date1 = new Date();
 	const date2 = new Date('10/11/1995');
 	const diffTime = Math.abs(date2 - date1);
-	const diffYear = Math.floor(diffTime / (1000 * 60 * 60 * 24)/11); 
+	const diffYear = Math.floor(diffTime / (1000 * 60 * 60 * 24)/365); 
 	
 	return diffYear
 }

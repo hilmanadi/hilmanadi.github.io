@@ -71,7 +71,7 @@
 			  	</div>			
 			</div>
 
-			<div class="hero-body has-text-centered has-background-dark has-text-light" id="profile" x-data="{head:'&#128100; Profile',content:{p:{h:'Phone',b:'0812-4911-2400'},e:{h:'Email',b:'hilmanadi1995@gmail.com'},a:{h:'Address',b:'Jl. Sumbersari 3 no 229 Rt.04 Rw.01 Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur'},ig:{h:'',b:'@hilmaanadi'},fb:{h:'',b:'fb.me/hilman.adi.9'},gh:{h:'',b:'github.com/hilmanadi'}}}">				
+			<div class="hero-body has-text-centered has-background-dark has-text-light" id="profile" x-data="{head:'&#128100; Profile',content:{p:{h:'Phone',b:'0812-4911-2400'},e:{h:'Email',b:'hilmanadi1995@gmail.com'},a:{h:'Address',b:'Jl. Sumbersari 3 no 229 Rt.04 Rw.01 Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur'},ig:{h:'',b:'@hilmaanadi',l:'https://instagram.com/hilmaanadi'},fb:{h:'',b:'fb.me/hilman.adi.9',l:'https://fb.me/hilman.adi.9'},gh:{h:'',b:'github.com/hilmanadi',l:'https://github.com/hilmanadi'}}}">				
 				<div class="columns">
 					<div class="column">
 						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
@@ -111,7 +111,10 @@
 									<img src="./image/ig.png" alt="" style="width: 32px;height: 32px;">
 							</div>
 							<div class="column is-half">
-								<span x-text='content.ig.b'></span>
+								<a 
+											style="color: inherit;"
+											x-bind:href="content.ig.l"
+											x-text = "content.ig.b"> </a>
 							</div>
 						</div>
 						<div class="columns">
@@ -119,7 +122,10 @@
 								<img src="./image/fb.png" alt="" style="width: 32px;height: 32px;">
 							</div>
 							<div class="column is-half">
-								<span x-text='content.fb.b'></span>
+								<a 
+											style="color: inherit;"
+											x-bind:href="content.fb.l"
+											x-text = "content.fb.b"> </a>
 							</div>
 						</div>
 						<div class="columns">
@@ -127,7 +133,10 @@
 								<img src="./image/github.svg" alt="" style="width: 32px;height: 32px;">
 							</div>
 							<div class="column is-half">
-								<span x-text='content.gh.b'></span>
+								<a 
+											style="color: inherit;"
+											x-bind:href="content.gh.l"
+											x-text = "content.gh.b"> </a>
 							</div>
 						</div>
 					</div>
