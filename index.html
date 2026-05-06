@@ -1,273 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="./image/hak.ico">
-	<link rel="stylesheet" href="./css/bulma.min.css">
-	<script src="./js/alpine.min.js" defer></script>
-	<script src="./js/index.js"></script>
-	<link rel="stylesheet" href="./css/index.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>PROFILE HILMAN ADI KARTIKA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hilman Adi | Portfolio</title>
+<link rel="icon" type="image/x-icon" href="./assets/img/hak.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-	<div class="content">
-		<nav id="nbr" class="navbar has-background-black has-text-light" role="navigation" x-data="{isOpen:false,heading:'HILMAN ADI KARTIKA',menu:{i:'Introduction',p:'Profile',e:'Experience',a:'Achievement',pr:'Projects',h:'Hobbies',s:'Skills'}}">
-			<div class="navbar-brand has-text-white">
-			  <a class="navbar-item" @click='window.location.href="./index.html"' style="font-weight: bold;color: inherit;">
-				<img src='./image/hak.ico' > <span x-text='heading' ></span>
-			  </a>
+<canvas id="bgCanvas"></canvas>
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar premium-navbar is-fixed-top">
+<div class="container">
+
+	<div class="navbar-brand">
+		<a class="navbar-item has-text-weight-bold brand-item">
+		  <img src="./assets/img/hak.ico" alt="logo" class="brand-icon">
+		  <span>Hilman Adi Kartika</span>
+		</a>
+
+		<a role="button" class="navbar-burger" id="burger">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item nav-link" data-target="about">About</a>
+	  <a class="navbar-item nav-link" data-target="skills">Skills</a>
+      <a class="navbar-item nav-link" data-target="projects">Projects</a>
+      <a class="navbar-item nav-link" data-target="hobbies">Hobbies</a>
+	  <a class="navbar-item nav-link" data-target="social">Social</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero is-medium">
+<div class="hero-body">
+  <div class="container">
+    <div class="columns is-vcentered">
+
+      <div class="column">
+        <h1 class="hero-title">
+          <span id="typingText"></span><span class="cursor">|</span>
+        </h1>
+
+        <h2 id="subtitle" class="hero-subtitle subtitle-animate">
+          <p>Fullstack Developer • Desktop App Developer • IT Support</p>
 		  
-			  <a role="button" class="navbar-burger" @click="isOpen = !isOpen" style="color: inherit;" >
-				<span aria-hidden="true" style="color: inherit;"></span>
-				<span aria-hidden="true" style="color: inherit;"></span>
-				<span aria-hidden="true" style="color: inherit;"></span>
-			  </a>
-			</div>
-		  
-			<div id="navbarBasicExample" class="navbar-menu has-text-light has-background-black " :class="{ 'is-active': isOpen }" @click.away="isOpen = true">
-			  <div class="navbar-start">
-				<a class="navbar-item" @click='getmenu(menu.i)' style="color: inherit;">
-					&#128240; <span x-text='menu.i'></span>
-				</a>
-				<a class="navbar-item" @click='getmenu(menu.p)' style="color: inherit;">
-					&#128100; <span x-text='menu.p'></span>
-				</a>
-				<a class="navbar-item" @click='getmenu(menu.e)' style="color: inherit;">
-					&#128218; <span x-text='menu.e'></span>
-				</a>
-				<a class="navbar-item" @click='getmenu(menu.a)' style="color: inherit;">
-					&#127941; <span x-text='menu.a'></span>
-				</a>
-				<a class="navbar-item" @click='getmenu(menu.pr)' style="color: inherit;">
-					&#128297; <span x-text='menu.pr'></span>
-				</a>
-				<a class="navbar-item" @click='getmenu(menu.s)' style="color: inherit;">
-					&#11088; <span x-text='menu.s'></span>
-				</a>
-			  </div>
-			</div>
-		</nav>
+        </h2>
+      </div>
 
-		<section class="hero">
-			<div class="hero-body has-text-centered" id="introduction" x-data="{yearNow:getYear(),head:'&#128240; Introduction',heading:'Hello, Welcome to My Profile Page',subheading:'Website and Desktop App Developers (Javascript, PHP, Python)',description:''}" x-transition:enter="transition ease-out duration-100">
-				<div class="columns">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns">
-					<div class="column" style="text-align: left;" >
-						<h2 x-text="heading"></h3>
-						<h5 x-text="subheading"></h4>
-						<span> 
-							Let me introduce myself, My name Hilman Adi Kartika, im <span x-text="yearNow"></span> yo, Currently working at PG. Kebon Agung (Sugar Factory) as Website and Desktop App Developer.
-						</span>
-						<br><br>
-						<p class="has-text-weight-bold has-text-info">
-							<a href="./assets/CV Hilman Adi Kartika .pdf" download >
-								<i style="font-size:20px;" class="fa ">&#xf1c1;</i> Download My CV
-							</a>
-						</p>
-					</div>
-					<div class="column is-two-fifths">
-						<img id="i1" style="border-radius: 50%;width: 200px;height: 200px;object-position: center;"  src="./image/p2_new.png">
-					</div>
-			  	</div>			
-			</div>
+      <div class="column has-text-centered">
+        <div id="photo" class="profile-wrapper">
+          <img src="./assets/img/p2.png" class="profile-img">
+        </div>
+      </div>
 
-			<div class="hero-body has-text-centered has-background-dark has-text-light" id="profile" x-data="{head:'&#128100; Profile',content:{p:{h:'Phone',b:'0812-4911-2400'},e:{h:'Email',b:'hilmanadi1995@gmail.com'},a:{h:'Address',b:'Jl. Sumbersari 3 no 229 Rt.04 Rw.01 Kelurahan Sumbersari Kecamatan Lowokwaru Kota Malang Jawa Timur'},ig:{h:'',b:'@hilmaanadi',l:'https://instagram.com/hilmaanadi'},fb:{h:'',b:'fb.me/hilman.adi.9',l:'https://fb.me/hilman.adi.9'},gh:{h:'',b:'github.com/hilmanadi',l:'https://github.com/hilmanadi'}}}">				
-				<div class="columns">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns">
-					<div class="column is-half">
-						<div class="columns">
-							<div class="column is-half">
-								&#128222;<span x-text='content.p.h'></span>
-							</div>
-							<div class="column is-half"  style="text-align: left;">
-								<span x-text='content.p.b'></span>
-							</div>
-						</div>
-						<div class="columns">
-							<div class="column is-half">
-								&#128231; <span x-text='content.e.h'></span>
-							</div>
-							<div class="column is-half"  style="text-align: left;">
-								<span x-text='content.e.b'></span>
-							</div>
-						</div>
-						<div class="columns">
-							<div class="column is-half">
-								&#127968; <span x-text='content.a.h'></span>
-							</div>
-							<div class="column is-half"  style="text-align: left;">
-								<span x-text='content.a.b'></span>
-							</div>
-						</div>
-					</div>
+    </div>
+  </div>
+</div>
+</section>
 
-					<div class="column is-half">
-						<div class="columns">
-							<div class="column is-half">
-									<img src="./image/ig.png" alt="" style="width: 32px;height: 32px;">
-							</div>
-							<div class="column is-half">
-								<a 
-											style="color: inherit;"
-											x-bind:href="content.ig.l"
-											x-text = "content.ig.b"> </a>
-							</div>
-						</div>
-						<div class="columns">
-							<div class="column is-half">
-								<img src="./image/fb.png" alt="" style="width: 32px;height: 32px;">
-							</div>
-							<div class="column is-half">
-								<a 
-											style="color: inherit;"
-											x-bind:href="content.fb.l"
-											x-text = "content.fb.b"> </a>
-							</div>
-						</div>
-						<div class="columns">
-							<div class="column is-half">
-								<img src="./image/github.svg" alt="" style="width: 32px;height: 32px;">
-							</div>
-							<div class="column is-half">
-								<a 
-											style="color: inherit;"
-											x-bind:href="content.gh.l"
-											x-text = "content.gh.b"> </a>
-							</div>
-						</div>
-					</div>
-			  	</div>
-			</div>
+<!-- ABOUT -->
+<section id="about" class="section fade-up">
+<div class="container">
+  <h2 class="title">About Me</h2>
+  <h2 class="subtitle_about">
+     I’m a software developer focused on backend systems, web applications, desktop applications, and IT Support. I enjoy building APIs, managing databases, and solving real-world technical problems. Currently working with technologies like Node.js, Bun.js, Python, PostgreSQL, and modern JavaScript frameworks.I enjoy solving backend challenges and designing clean system architecture My goal is to build scalable and reliable systems that are easy to maintain.
+	 <br>
+	 <p class="has-text-weight-bold has-text-info cv-download">
+		<a href="./assets/pdf/CV Hilman Adi Kartika.pdf" download >
+		  <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" width="40"> Download My CV
+		</a>
+	</p>
+  </h2>
+</div>
+</section>
 
-			<div class="hero-body has-text-centered" id="experience" x-data="{head:'&#128218; Experience',content:{i:{h:'Internship',b:'Economics and Business Faculty, Brawijaya University as Network Engineer'},w:{h:'Works',b1:' Front End Developer at PT. Absolute Connection (2019-2020 1.5 years)',b2:'Web and Desktop App Developer at PG.Kebon Agung (2021 - Now)'},p:{h:'Participants',b:'Code And Algorithm Competition at Informatic Engineers Faculty, Brawijaya University'}}}">
-				<div class="columns">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns">
-					<div class="column is-half">
-						&#9000; <span x-text="content.i.h"></span>
-					</div>
-					<div class="column is-half">
-						<span x-text="content.i.b"></span>
-					</div>
-			  	</div>
-				  <div class="columns">
-					<div class="column is-half">
-						&#128101; <span x-text="content.p.h"></span>
-					</div>
-					<div class="column is-half">
-						<span x-text="content.p.b"></span>
-					</div>
-			  	</div>
-				  <div class="columns">
-					<div class="column is-half">
-						&#128188; <span x-text="content.w.h"></span>
-					</div>
-					<div class="column is-half">
-						<p>1. <span x-text="content.w.b1"></span></p>
-						<p>2. <span x-text="content.w.b2"></span></p>
-					</div>
-			  	</div>
-			</div>
+<!-- SKILLS -->
+<section id="skills" class="section fade-up">
+<div class="container">
+  <h2 class="title">Skills</h2>
 
-			<div class="hero-body has-text-centered has-background-dark has-text-light" id="achievement" x-data="{head:'&#127941; Achievement',content:{mo:{h:'Microsoft Office',b:'Gold achievement on Microsoft Office Desktop Application'},pes:{h:'PES (Pro Evolution Soccer)',b:'Second Place Pro Evolution Soccer 2018 on Computer Science Faculty Competition'}}}">
-				<div class="columns">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns">
-					<div class="column is-half" >
-						&#127941; <span x-text='content.mo.h'></span>
-					</div>
-					<div class="column is-half">
-						<span x-text='content.mo.b'></span>
-					</div>
-			  	</div>
-				  <div class="columns">
-					<div class="column is-half">
-						&#129352; <span x-text='content.pes.h'></span>
-					</div>
-					<div class="column is-half">
-						<span x-text='content.pes.b'></span>
-					</div>
-			  	</div>
-			</div>
+  <div class="columns is-multiline">
 
-			<div class="hero-body " id="skills" x-data="{head:'&#11088; Skills',dt:[{head:'Javascript',body:[{data:'Node JS'},{data:'Bun JS'},{data:'Solid JS'},{data:'React JS'},{data:'JQuery'},{data:'Alpine JS'}]},{head:'PHP','body':[{data:'Code Igniter'},{data:'Laravel'}]},{head:'Python',body:[{data:'Tkinter'},{data:'PyQt'}]},{head:'SQL',body:[{data:'PostgreSQL'},{data:'MySQL'}]}]}">
-				<div class="columns has-text-centered">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns has-text-centered">
-					<div class="column is-full">
-						<template x-for='x in dt' >
-							<template x-for="y in x.body">
-								<li x-text="y.data"></li>
-							</template>
-						</template>
-					</div>
-			  	</div>
-			</div>
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40">
+        <p>JavaScript</p>
+      </div>
+    </div>
 
-			<div class="hero-body has-text-centered has-background-dark has-text-light" id="projects" x-data="{head:'&#128297; Projects',dt:[{no:'1',pn:'Ketering',dp:'PHP, and Laravel',href:'#projects'},{no:'2',pn:'Toko Kartika',dp:'HTML/CSS, JS, and Node JS',href:'#projects'},{no:'3',pn:'SPT KBA',dp:'Python Tkinter',href:'#projects'},{no:'4',pn:'Surat Jalan KBA',dp:'HTML/CSS, JS, and PHP',href:'#projects'},{no:'5',pn:'LAF',dp:'HTML/CSS, JS and Apache Cordova(Mobile Apps)',href:'#projects'},{no:'6',pn:'Toko Kartika V2',dp:'HTML, Bulma CSS, Node JS, and Alpine JS',href:'#projects'},{no:'7',pn:'Gudang Perlengkapan PG. KBA',dp:'HTML, Bulma CSS, and Alpine JS',href:'#projects'},{no:'8',pn:'Suratinyuk!',dp:'HTML, Bulma CSS, and Solid JS',href:'https://suratinyuk.vercel.app'}]}">
-				<div class="columns">
-					<div class="column">
-						 <span x-text="head" style="font-weight: bold;font-size: 200%;"></span>
-					</div>
-			  	</div>
-				<div class="columns">
-					<div class="column is-full">
-						<table class="table has-background-dark has-text-light">
-							<thead>
-								<tr>
-									<th><abbr title="No. ">No</abbr></th>									
-									<th><abbr title="Project Name">Project Name</abbr></th>
-									<th><abbr title="Project Tech">Project Tech</abbr></th>
-								</tr>
-							</thead>
-							<tbody>
-								<template x-for='x in dt' :key='x.no'>
-									<tr>
-										<td data-label="No." x-text="x.no">
-										</td>
-										<td  data-label="Project Name" >
-											<a 
-											style="color: inherit;"
-											x-bind:href="x.href"
-											x-text = "x.pn"> </a>
-										</td>
-										<td  data-label="Project Tech" x-text="x.dp">
-										</td>
-									</tr>
-								</template>
-							</tbody>
-						</table>
-					</div>
-			  	</div>
-			</div>
-		</section>
-		
-		<footer class="footer has-background-black has-text-light" id="ftr">
-			<div class="content has-text-centered">
-				<p>
-					This website fully builded using <a  class="has-text-weight-bold" style="color: inherit;" href='https://bulma.io/'>Bulma CSS</a>, and Javascript using <a  class="has-text-weight-bold" style="color: inherit;" href='https://alpinejs.dev/'>Alpine JS</a>, <img src="image/hak.ico" style="width: 50px;height: 50px;"> By Hilman Adi Kartika 
-				</p>
-			</div>
-		</footer>
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40">
+        <p>Node.js</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://bun.sh/logo.svg" width="40">
+        <p>Bun.js</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+		<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" style="filter: brightness(0) invert(1);">
+        <p>Express</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40">
+        <p>PostgreSQL</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40">
+        <p>MySQL</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40">
+        <p>Linux</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn-icons-png.flaticon.com/512/2164/2164832.png" width="40">
+        <p>API Design</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40">
+        <p>Next.js</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40">
+        <p>React.js</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://www.solidjs.com/img/logo/without-wordmark/logo.svg" width="40">
+        <p>Solid.js</p>
+      </div>
+    </div>
+
+    <div class="column is-one-quarter fade-up">
+      <div class="card has-text-centered">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40">
+        <p>Python</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade-up">
+<div class="container">
+  <h2 class="title">Projects</h2>
+
+  <div class="columns">
+    <div class="column fade-up">
+  <div class="card">
+    Surat-In Yuk
+	<p><a href="https://suratinyuk.vercel.app" target="_blank">https://suratinyuk.vercel.app</a></p>
+    <div class="tech-stack">
+      <span class="tech-badge">Solid.js</span>
+	  <span class="tech-badge">Bulma CSS</span>
+    </div>
+  </div>
+</div>
+
+<div class="column fade-up">
+  <div class="card">
+    API SILOKA
+    <div class="tech-stack">
+      <span class="tech-badge">Express</span>
+      <span class="tech-badge">Bun.Js</span>
+	  <span class="tech-badge">PostgreSQL</span>
+    </div>
+  </div>
+</div>
+
+<div class="column fade-up">
+  <div class="card">
+    E-NGP PG. KA
+    <div class="tech-stack">
+      <span class="tech-badge">Bulma CSS</span>
+      <span class="tech-badge">JQuery</span>
+	  <span class="tech-badge">PostgreSQL</span>
+    </div>
+  </div>
+</div>
+
+<div class="column fade-up">
+  <div class="card">
+    SPT PG. KA
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">TKinter</span>
+	  <span class="tech-badge">PostgreSQL</span>
+    </div>
+  </div>
+</div>
+
+<div class="column fade-up">
+  <div class="card">
+    Toko Kartika
+    <div class="tech-stack">
+      <span class="tech-badge">Node.js</span>
+      <span class="tech-badge">Vanilla JavaScript</span>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="section fade-up">
+<div class="container">
+  <h2 class="title">Hobbies</h2>
+
+  <div class="hobby-wrapper">
+    <div class="hobby-track">
+      <img src="./assets/img/hobbies/1.png" class="hobby-img">
+      <img src="./assets/img/hobbies/2.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/3.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/4.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/5.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/6.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/7.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/8.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/9.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/10.png" class="hobby-img">
+	  <img src="./assets/img/hobbies/11.png" class="hobby-img">
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social" class="section fade-up has-text-centered">
+<div class="container">
+  <h2 class="title">Social</h2>
+
+  <div class="social-links">
+
+    <a class="button is-link" href="https://github.com/hilmanadi/" target="_blank">
+	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="24">
+      GitHub
+    </a>
+
+    <a class="button is-info" href="https://linkedin.com/in/hilman-adi-kartika-853406170" target="_blank">
+	 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="24">
+      LinkedIn
+    </a>
+
+    <a class="button is-primary" href="https://instagram.com/hilmaanadi/" target="_blank">
+	<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="24">
+      Instagram
+    </a>
+
+  </div>
+</div>
+</section>
+
+<footer id="footer" class="fade-up footer-brand">
+  <img src="./assets/img/hak.ico" alt="logo" class="footer-icon">
+  <span>© 2026 Hilman Adi Kartika</span>
+</footer>
+<script src="./assets/js/index.js"></script>
 </body>
 </html>
